@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+Documentation
+Introduction
+Welcome to the documentation. This application allows users to scan network information such as open/closed ports and security protocols. It's built using React and Node.js, and Python libraries, and it requires admin privileges to run the scan.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+How to Use
+Step 1: Enter the Target IP/Domain
+In the input field, enter the IP address, domain name (e.g., example.com), or use "localhost" for local testing.
 
-## Available Scripts
+Step 2: Start Scan
+Click the "Start Scan" button to begin the scan. The application will analyze the target and return results on open and closed ports, SSL and FTP health, as well as security recommendations.
 
-In the project directory, you can run:
+Step 3: Review the Results
+After the scan completes, the results will be displayed. You'll see information such as open/closed ports, protocols, and security suggestions.
 
-### `npm start`
+API Reference
+POST /scan
+This endpoint is used to perform a scan on a target (IP/Domain).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+POST /scan
+Request body:
+{
+  "targetIP": "string"   // IP address or domain to scan
+}
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Response:
+{
+  "result": [
+    {
+      "port": "number",      // Port number
+      "state": "open/closed",// Port state
+      "friendly_name": "string", // Protocol name
+      "suggestion": "string" // Security suggestion (if any)
+    }
+  ]
+}
