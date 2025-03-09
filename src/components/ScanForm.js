@@ -7,7 +7,11 @@ const ScanForm = () => {
     const [loading, setLoading] = useState(false);
     const [results, setResults] = useState([]);
 
-    const apiUrl = process.env.NEXT_PUBLIC_URL_API;
+    //const apiUrl = process.env.NEXT_PUBLIC_URL_API;
+    const apiUrl = process.env.REACT_APP_API_URL;
+    console.log("API URL:", apiUrl);
+
+
 
 
     const validateInput = (input) => {
@@ -29,7 +33,8 @@ const ScanForm = () => {
     
         try {
             // Send request to your backend for scanning the IP/Domain
-            const response = await axios.post(`${apiUrl}/scan`, "https://porthunter-back-1.onrender.com", { targetIP }, ); // Set a timeout (e.g., 10 seconds)
+            const response = await axios.post(`${apiUrl}/scan`, { targetIP });
+ 
     
             console.log('API Response:', response); // Debugging
     
