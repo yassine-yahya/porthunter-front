@@ -1,7 +1,6 @@
 .App {
   text-align: center;
-  background: linear-gradient(to right, black, #111a27); /* Optional background */
- 
+  background: linear-gradient(to right, black, #050005); 
 
 
 }
@@ -62,7 +61,7 @@ input {
   width: 300px;
   height: 26px;
   margin-top: 10px;
-  border: 1px solid rgb(52, 100, 52);
+  border: 1px solid purple;
   font-size: 30px;
   background-color: transparent;
   color: white;
@@ -81,10 +80,10 @@ input {
 
 button {
  
-  height: 50px;
-  width: 200px;
-  margin: 10px;
-  background-color:  #024405;;
+  height: 80px;
+  width: 240px;
+  margin: 50px;
+  background-color:  rgb(61, 7, 61);
   padding: 10px;
   font-size: 26px;
   border:none;
@@ -93,17 +92,17 @@ button {
   
 }
 button:hover{
- background-color: rgb(14, 155, 14);
+ background-color: purple;
 }
 
 button:disabled {
-  background-color: transparent;
-  color: white;
+  background-color: orangered;
+  color: black;
   font-size: 21px;
   
 }
 .warning {
-  background-color: #222020;
+  background-color: rgb(14, 13, 13);
   color: white;
   margin-top: 10px;
   font-size: 20px;
@@ -130,13 +129,14 @@ h3 {
 /* Navbar.css */
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color:#111a27;
-  padding: 1px 30px;
+  background-color:purple;
+  padding: 1px 100px;
   color: white;
   text-decoration: none;
   list-style: none;
+  height: auto;
 }
 .navbar .links{
   text-decoration: none;
@@ -148,16 +148,7 @@ h3 {
 .navbar .logo{
   position: block;
 }
-.navbar .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  color: white;
-}
-.navbar .logo span {
-  color: #45a049;
-  font-size: 30px;
 
-}
 
 .navbar .links {
   display: flex;
@@ -173,20 +164,22 @@ h3 {
 }
 
 .navbar .links a:hover {
-  color: #4CAF50;
+  color: purple;
+  cursor: pointer;
 }
 
 .navbar .nav-btn button {
   background-color:transparent;
   color: white;
-  font-size: 16px;
+  font-size: 21px;
   cursor: pointer;
-  width: 120px;
-  border: 2px solid rgb(59, 83, 10);
+  width: 160px;
+  height: 60px;
+  border: 1px solid purple;
 }
 
 .navbar .nav-btn button:hover {
-  background-color: #45a049;
+  background-color: purple;
 }
 
 .contact-section {
@@ -240,12 +233,13 @@ ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: top;
-  height: auto;
+
   text-align: center;
   padding: 0 20px;
-  margin-bottom: 30px;
-  background: linear-gradient(to right, black, #111a27); /* Optional background */
-  border-bottom: 2px solid rgb(26, 29, 26);
+  margin-bottom: 100px;
+  margin-top: 100px;
+   /* Optional background */
+
 
 }
 
@@ -259,15 +253,12 @@ ul li a:hover {
   max-width: 1000px;
 
 }
-.hero-content p span{
-  color: #28992e;
-  font-size: 2rem;
-}
+
 
 .hero .hero-content h1 {
   font-size: 2rem;
   margin-bottom: 40px;
-  color: #28992e;
+  color: white;
   text-align: center;
   font-weight: bold;
 }
@@ -322,7 +313,7 @@ ul li a:hover {
 }
 
 .privacy p {
-  color: rgb(10, 196, 35);
+  color: white;
   font-size: 14px;
   text-align: left;
   width: 300px;
@@ -343,8 +334,8 @@ ul li a:hover {
   width: 800px;
   padding: 15px;
   color: white;
-  background-color: rgba(0, 0, 0, 0.2);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgb(14, 13, 13);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.158);
   transition: transform 0.3s ease-in-out;
   
 }
@@ -426,7 +417,7 @@ ul li a:hover {
 
 .note-after-results{
   font-size: 18px;
-  color: rgb(228, 65, 6);
+  color: white;
   
 }
 
@@ -436,7 +427,7 @@ ul li a:hover {
   flex-direction: column;
   justify-content: left;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 20px;
   color: white;
   background-color: transparent;
@@ -569,7 +560,7 @@ footer {
   text-align: center;
   font-size: 14px;
   margin-top: 40px;
-  border-top: 1px solid #222020;
+  border-top: 1px solid purple;
   padding: 20px;
 }
 
@@ -694,22 +685,32 @@ footer .copyright {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: black;
-  padding: 10px 30px;
+  background-color: rgb(19, 2, 19);
   color: white;
   font-size: 26px;
+  border-bottom: purple;
+  height: 70px;
+  padding: 10px 100px;
+
+}
+
+.navbar img{
+
+  height: 70px;
+  width: 70px;
+  
+}
+
+.navbar h1{
+  padding: 10px;
 }
 
 
-.navbar .logo h1 {
-  font-size: 30px;
-  margin: 0;
-  color: white;
-}
 
 .navbar .logo span {
-  color: #45a049;
-  font-size: 30px;
+  color: white;
+  font-size: 33px;
+  background-color: purple;
 }
 
 .navbar .links {
@@ -724,10 +725,11 @@ footer .copyright {
   text-decoration: none;
   font-size: 20px;
   transition: color 0.3s;
+  font-weight: bold;
 }
 
 .navbar .links a:hover {
-  color: #4CAF50;
+  color: purple;
 }
 
 /* Burger Menu */
@@ -780,6 +782,7 @@ footer .copyright {
   .card{
     display: flex;
     flex-direction: column;
+    align-items: center;
     max-width: 300px;
    
 
@@ -851,7 +854,7 @@ footer .copyright {
     font-size: 18px;
   }
   .hero-content p span{
-    color: #28992e;
+    
     font-size: 1.2rem;
   }
   .target  {

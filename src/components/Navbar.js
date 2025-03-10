@@ -1,13 +1,15 @@
 import React from "react";
 import "../App.css"; // Custom CSS file for styling
 import { Link } from 'react-scroll';
+import porthunterlogo from "../Assets/porthunterlogo.png"
 
 
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <h1><span>Port</span>Hunter</h1>
+
+        <img src={porthunterlogo} alt="Logo" width={200} />
       </div>
       <ul className="links">
         
