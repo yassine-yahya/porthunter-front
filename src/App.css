@@ -28,6 +28,8 @@ html {
   flex-direction: column;
   margin-top: 20px;
   width: 100vh;
+  padding: 20px;
+  border: 1px solid rgb(24, 1, 24);
   
   
 }
@@ -61,7 +63,7 @@ input {
   width: 300px;
   height: 26px;
   margin-top: 10px;
-  border: 1px solid purple;
+  border: 1px solid rgb(43, 3, 43);
   font-size: 30px;
   background-color: transparent;
   color: white;
@@ -80,8 +82,8 @@ input {
 
 button {
  
-  height: 80px;
-  width: 240px;
+  height: 60px;
+  width: 220px;
   margin: 50px;
   background-color:  rgb(61, 7, 61);
   padding: 10px;
@@ -96,9 +98,10 @@ button:hover{
 }
 
 button:disabled {
-  background-color: orangered;
-  color: black;
-  font-size: 21px;
+  border:1px solid  orangered;
+  background-color: transparent;
+  color: white;
+  font-size: 22px;
   
 }
 .warning {
@@ -129,7 +132,7 @@ h3 {
 /* Navbar.css */
 .navbar {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   background-color:purple;
   padding: 1px 100px;
@@ -137,30 +140,32 @@ h3 {
   text-decoration: none;
   list-style: none;
   height: auto;
+
 }
-.navbar .links{
-  text-decoration: none;
-  list-style: none;display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 
 .navbar .logo{
   position: block;
 }
 
 
-.navbar .links {
-  display: flex;
-  gap: 26px;
+
+
+.navbar .links{
   text-decoration: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
 }
 
-.navbar .links a {
+.navbar .links li a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 14px;
   transition: color 0.3s;
+  margin-right: 50px;
 }
 
 .navbar .links a:hover {
@@ -171,10 +176,10 @@ h3 {
 .navbar .nav-btn button {
   background-color:transparent;
   color: white;
-  font-size: 21px;
+  font-size: 14px;
   cursor: pointer;
-  width: 160px;
-  height: 60px;
+  width: 120px;
+  height: 50px;
   border: 1px solid purple;
 }
 
@@ -233,11 +238,13 @@ ul li a:hover {
   display: flex;
   justify-content: center;
   align-items: top;
-
   text-align: center;
   padding: 0 20px;
   margin-bottom: 100px;
-  margin-top: 100px;
+  border-top: 1px solid rgb(59, 3, 59);
+  padding-top: 100px;
+
+
    /* Optional background */
 
 
@@ -252,6 +259,7 @@ ul li a:hover {
   justify-content: center;
   max-width: 1000px;
 
+
 }
 
 
@@ -261,6 +269,7 @@ ul li a:hover {
   color: white;
   text-align: center;
   font-weight: bold;
+
 }
 
 .hero p {
@@ -556,17 +565,21 @@ section:last-child {
 }
 
 /* Footer Styling */
-footer {
+.foo {
+  display: flex;
   text-align: center;
+  align-items: center;
+  justify-content: center;
   font-size: 14px;
   margin-top: 40px;
-  border-top: 1px solid purple;
+  border-top: 1px solid rgb(41, 1, 41);
   padding: 20px;
 }
 
 footer p {
   margin: 0;
   color: #cecbcb;
+  margin: 10px;
 }
 
 footer .copyright {
@@ -805,7 +818,7 @@ footer .copyright {
   .hero{
     text-align: center;
     font-size: 18px;
-    margin-bottom: 100px;
+    margin-bottom: 200px;
    
 
   }.about-container{
@@ -818,6 +831,9 @@ footer .copyright {
     max-width: 300px;
     margin-top: 100px;
    
+  }
+  .about-container´{
+    margin:100px ;
   }
   .privacy p{
     text-align: center;
