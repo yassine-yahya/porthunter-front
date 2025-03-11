@@ -7,7 +7,7 @@ const ScanForm = () => {
     const [loading, setLoading] = useState(false);
     const [results, setResults] = useState([]);
 
-    const API_URL = import.meta.env.REACT_APP_API_URL;
+    const API_URL = process.env.REACT_APP_API_URL;
 
 
     const validateInput = (input) => {
@@ -27,6 +27,9 @@ const ScanForm = () => {
         setResults([]); // Clear previous results
 
         try {
+            if (!API_URL) {
+                console.error("API_URL is undefined! Check your .env file.");
+              }
             // Send request to your backend for scanning the IP/Domain
             const response = await axios.post(`${API_URL}/scan`, { targetIP });
             
