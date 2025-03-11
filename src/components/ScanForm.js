@@ -7,7 +7,7 @@ const ScanForm = () => {
     const [loading, setLoading] = useState(false);
     const [results, setResults] = useState([]);
 
-    const API_URL = import.meta.env.VITE_API_URL;
+    const API_URL = import.meta.env.REACT_APP_API_URL;
 
 
     const validateInput = (input) => {
