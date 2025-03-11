@@ -222,7 +222,9 @@ ul li a:hover {
 
 @media (max-width: 768px) {
   .navbar {
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
   }
 
   .navbar .links {
@@ -241,7 +243,7 @@ ul li a:hover {
   text-align: center;
   padding: 0 20px;
   margin-bottom: 100px;
-  border-top: 1px solid rgb(59, 3, 59);
+  border-top: 1px solid rgb(46, 5, 46);
   padding-top: 100px;
 
 
@@ -368,8 +370,7 @@ ul li a:hover {
 
 }
 .card:hover {
-  
-  background-color: rgb(14, 19, 14);
+background-color:  rgb(22, 3, 22);
 }
 
 .header-card{
@@ -755,15 +756,23 @@ footer .copyright {
 .burger div {
   width: 30px;
   height: 3px;
-  background-color: white;
+  background-color: transparent;
   margin: 5px;
   transition: 0.3s;
+}
+.close-btn {
+  display: none;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
 }
 
 /* Responsive Navbar */
 @media (max-width: 768px) {
   .burger {
     display: flex;
+
   }
 
   .navbar .links {
@@ -771,9 +780,9 @@ footer .copyright {
     flex-direction: column;
     position: absolute;
     top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #111a27;
+    margin: auto;
+    width: 50%;
+    background-color: rgb(24, 3, 24);
     text-align: center;
     gap: 10px;
     padding: 10px 0;
@@ -805,6 +814,12 @@ footer .copyright {
   }
   .navbar{
     width: auto;
+    height: auto;
+    
+
+  }
+  .navbar .nav-btn{
+    padding: 0;
   }
   .card-secure{
     display: flex;
@@ -820,12 +835,16 @@ footer .copyright {
     font-size: 18px;
     margin-bottom: 200px;
    
-
+   
   }.about-container{
     max-width: 400px;
     margin-top: 100px;
    
   }
+  .main-form{
+    padding: 50px;
+  }
+
   .docs-container
   {
     max-width: 300px;
@@ -875,6 +894,14 @@ footer .copyright {
   }
   .target  {
     margin-bottom: 100px;
+  }
+
+  .links.open {
+    display: flex;
+  }
+
+  .close-btn {
+    display: block;
   }
 
 }
