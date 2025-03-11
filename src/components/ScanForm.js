@@ -7,6 +7,9 @@ const ScanForm = () => {
     const [loading, setLoading] = useState(false);
     const [results, setResults] = useState([]);
 
+    const API_URL = import.meta.env.VITE_API_URL;
+
+
     const validateInput = (input) => {
         const regex = /^(localhost|(\d{1,3}\.){3}\d{1,3}|([a-zA-Z0-9-]+\.)*[a-zA-Z0-9-]+\.[a-zA-Z]{2,})$/;
         return regex.test(input);
@@ -25,7 +28,7 @@ const ScanForm = () => {
 
         try {
             // Send request to your backend for scanning the IP/Domain
-            const response = await axios.post("http://localhost:5000/scan", { targetIP });
+            const response = await axios.post(`${API_URL}/scan`, { targetIP });
             
             if (response.data && response.data.result) {
                 setResults(response.data.result); // Store results
