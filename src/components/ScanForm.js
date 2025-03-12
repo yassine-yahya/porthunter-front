@@ -32,8 +32,17 @@ const ScanForm = () => {
                 console.error("API_URL is undefined! Check your .env file.");
               }
             // Send request to your backend for scanning the IP/Domain
-            const response = await axios.post(`${API_URL}/scan`, { targetIP });
-            
+            const response = await axios.post(
+                `${API_URL}/scan`,
+                { targetIP }, // Request body
+                {
+                  headers: {
+                    "Content-Type": "application/json",
+                  },
+                  withCredentials: true, // This is the correct way in Axios for credentials
+                }
+              );
+              
             if (response.data && response.data.result) {
                 setResults(response.data.result); // Store results
             }
