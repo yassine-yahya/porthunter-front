@@ -12,7 +12,6 @@ import ContactPage from './components/ContactPage';
 
 
 
-
 function App() {
   const [results, setResults] = useState([]);
   
@@ -21,6 +20,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      
       <Hero />
       
       <ScanForm setResults={setResults} />

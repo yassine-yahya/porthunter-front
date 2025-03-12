@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "../App.css";
+import ServerStatus from "./ServerStatus"
 
 const ScanForm = () => {
     const [targetIP, setTargetIP] = useState("");
@@ -83,6 +84,7 @@ const ScanForm = () => {
                                 
                                 onChange={(e) => setTargetIP(e.target.value)} // Update state
                             />
+                            <ServerStatus/>
                         </label>
                         <div className="privacy">
                             <p>🔒Your <strong>privacy</strong> is important to us. We do not collect, store, or share any personal data.</p>
